@@ -2,39 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Algebraic Adventure Game Design System - Fantasy Theme
+All colors MUST be HSL for proper theme compatibility.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Dark Fantasy Background Colors */
+    --background: 240 15% 8%;
+    --foreground: 45 100% 85%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Adventure Cards & UI Elements */
+    --card: 240 20% 12%;
+    --card-foreground: 45 90% 80%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 240 25% 10%;
+    --popover-foreground: 45 95% 85%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Magical Primary Colors - Golden Magic */
+    --primary: 45 100% 60%;
+    --primary-foreground: 240 25% 10%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Mystical Secondary - Deep Purple */
+    --secondary: 260 60% 25%;
+    --secondary-foreground: 45 100% 85%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted Dungeon Elements */
+    --muted: 240 15% 15%;
+    --muted-foreground: 240 10% 60%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Magical Accent - Enchanted Blue */
+    --accent: 220 80% 55%;
+    --accent-foreground: 240 25% 10%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Danger/Error - Fire Red */
+    --destructive: 0 80% 55%;
+    --destructive-foreground: 45 100% 85%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* UI Borders & Inputs */
+    --border: 240 20% 18%;
+    --input: 240 25% 15%;
+    --ring: 45 100% 60%;
+
+    /* Adventure Game Specific Colors */
+    --treasure: 45 100% 65%;
+    --treasure-glow: 45 100% 75%;
+    --magic: 260 80% 70%;
+    --magic-glow: 260 100% 80%;
+    --success: 120 60% 50%;
+    --success-glow: 120 80% 60%;
+    --locked: 240 15% 25%;
+    --unlocked: 45 100% 60%;
+
+    /* Gradients */
+    --gradient-magic: linear-gradient(135deg, hsl(var(--magic)), hsl(var(--magic-glow)));
+    --gradient-treasure: linear-gradient(135deg, hsl(var(--treasure)), hsl(var(--treasure-glow)));
+    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(var(--success-glow)));
+    --gradient-adventure: linear-gradient(180deg, hsl(var(--background)), hsl(240 20% 12%));
+
+    /* Shadows & Glows */
+    --shadow-magical: 0 0 20px hsl(var(--magic) / 0.5);
+    --shadow-treasure: 0 0 25px hsl(var(--treasure) / 0.6);
+    --shadow-success: 0 0 15px hsl(var(--success) / 0.4);
+    --shadow-card: 0 8px 32px hsl(240 25% 5% / 0.8);
+
+    /* Animations */
+    --transition-magical: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --radius: 0.5rem;
 

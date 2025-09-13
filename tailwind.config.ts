@@ -47,6 +47,21 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Adventure Game Colors
+        treasure: {
+          DEFAULT: "hsl(var(--treasure))",
+          glow: "hsl(var(--treasure-glow))",
+        },
+        magic: {
+          DEFAULT: "hsl(var(--magic))",
+          glow: "hsl(var(--magic-glow))",
+        },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          glow: "hsl(var(--success-glow))",
+        },
+        locked: "hsl(var(--locked))",
+        unlocked: "hsl(var(--unlocked))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -80,10 +95,49 @@ export default {
             height: "0",
           },
         },
+        "magical-glow": {
+          "0%": {
+            boxShadow: "0 0 20px hsl(var(--magic) / 0.5)",
+            transform: "scale(1)",
+          },
+          "100%": {
+            boxShadow: "0 0 30px hsl(var(--magic) / 0.8)",
+            transform: "scale(1.02)",
+          },
+        },
+        "treasure-bounce": {
+          "0%": {
+            transform: "scale(1) rotate(0deg)",
+          },
+          "50%": {
+            transform: "scale(1.1) rotate(2deg)",
+          },
+          "100%": {
+            transform: "scale(1) rotate(0deg)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "magical-glow": "magical-glow 2s ease-in-out infinite alternate",
+        "treasure-bounce": "treasure-bounce 0.6s ease-out",
+      },
+      backgroundImage: {
+        "gradient-magic": "var(--gradient-magic)",
+        "gradient-treasure": "var(--gradient-treasure)",
+        "gradient-success": "var(--gradient-success)",
+        "gradient-adventure": "var(--gradient-adventure)",
+      },
+      boxShadow: {
+        "magical": "var(--shadow-magical)",
+        "treasure": "var(--shadow-treasure)",
+        "success": "var(--shadow-success)",
+        "card-adventure": "var(--shadow-card)",
+      },
+      transitionTimingFunction: {
+        "magical": "var(--transition-magical)",
+        "bounce-magic": "var(--transition-bounce)",
       },
     },
   },
