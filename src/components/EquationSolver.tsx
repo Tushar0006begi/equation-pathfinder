@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -18,6 +18,13 @@ export const EquationSolver = ({ equation, onSolved, showHint, onHintRequest }: 
   const [userAnswer, setUserAnswer] = useState('');
   const [feedback, setFeedback] = useState<'correct' | 'incorrect' | null>(null);
   const [showHintText, setShowHintText] = useState(false);
+
+  // Reset solver state when a new equation arrives
+  useEffect(() => {
+    setUserAnswer('');
+    setFeedback(null);
+    setShowHintText(false);
+  }, [equation.id]);
 
   const handleSubmit = () => {
     const numericAnswer = parseFloat(userAnswer);

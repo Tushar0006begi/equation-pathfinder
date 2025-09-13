@@ -179,6 +179,7 @@ export const GameLevel = ({ level, onComplete, onBack }: GameLevelProps) => {
       {/* Current Equation */}
       <div className="flex justify-center">
         <EquationSolver
+          key={currentEquation.id}
           equation={currentEquation}
           onSolved={handleEquationSolved}
           showHint={true}
